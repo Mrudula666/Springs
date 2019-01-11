@@ -2,10 +2,9 @@ package com.cg.app.account.dao;
 
 import java.sql.SQLException;
 import java.util.List;
-
 import java.util.logging.Logger;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -13,17 +12,13 @@ import com.cg.app.account.SavingsAccount;
 import com.cg.app.exception.AccountNotFoundException;
 
 @Repository
-@Primary
 public class SavingsAccountSJDaoImpl implements SavingsAccountDAO {
 
 	Logger logger = Logger.getLogger(SavingsAccountSJDaoImpl.class.getName());
 	@Autowired
-	private JdbcTemplate template;
+	public JdbcTemplate template;
 
-	public SavingsAccount createNewAccount(SavingsAccount account) throws ClassNotFoundException, SQLException {
-		
-		
-
+	public SavingsAccount createNewAccount(SavingsAccount account){
 		template.update("INSERT INTO account_details VALUES(?,?,?,?,?,?)",
 				new Object[] { account.getBankAccount().getAccountNumber(),
 						account.getBankAccount().getAccountHolderName(), account.getBankAccount().getAccountBalance(),
