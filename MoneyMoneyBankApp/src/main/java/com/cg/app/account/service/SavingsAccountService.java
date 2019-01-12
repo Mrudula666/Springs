@@ -10,7 +10,7 @@ public interface SavingsAccountService {
 
 	SavingsAccount createNewAccount(String accountHolderName, double accountBalance, boolean salary) throws ClassNotFoundException, SQLException;
 
-	SavingsAccount updateAccount(SavingsAccount account) throws ClassNotFoundException, SQLException;
+	SavingsAccount updateAccount(SavingsAccount account) throws ClassNotFoundException, SQLException, AccountNotFoundException;
 
 	SavingsAccount getAccountById(int accountNumber) throws ClassNotFoundException, SQLException, AccountNotFoundException;
 

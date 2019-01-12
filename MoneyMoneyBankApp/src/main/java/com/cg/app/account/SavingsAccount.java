@@ -16,6 +16,10 @@ public class SavingsAccount {
 	}
 	
 
+	public SavingsAccount(String accountHolderName,boolean salary) {
+		bankAccount = new BankAccount(accountHolderName);
+		this.salary = salary;
+	}
 	public SavingsAccount(int accountNumber, String accountHolderName, double accountBalance, boolean salary) {
 		bankAccount = new BankAccount(accountNumber, accountHolderName, accountBalance);
 		this.salary = salary;
@@ -42,18 +46,3 @@ public class SavingsAccount {
 	}
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

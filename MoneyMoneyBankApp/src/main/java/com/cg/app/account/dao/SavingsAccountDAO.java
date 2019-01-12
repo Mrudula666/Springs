@@ -9,7 +9,7 @@ import com.cg.app.exception.AccountNotFoundException;
 public interface SavingsAccountDAO {
 	
 	SavingsAccount createNewAccount(SavingsAccount account) throws ClassNotFoundException, SQLException;
-	SavingsAccount updateAccount(SavingsAccount account) throws ClassNotFoundException, SQLException;
+	SavingsAccount updateAccount(SavingsAccount account) throws ClassNotFoundException, SQLException, AccountNotFoundException;
 	SavingsAccount getAccountById(int accountNumber) throws ClassNotFoundException, SQLException, AccountNotFoundException;
 	SavingsAccount deleteAccount(int accountNumber) throws ClassNotFoundException, SQLException, AccountNotFoundException;
 	List<SavingsAccount> getAllSavingsAccount() throws ClassNotFoundException, SQLException;

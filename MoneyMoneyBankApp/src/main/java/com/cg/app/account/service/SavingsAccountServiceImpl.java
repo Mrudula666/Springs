@@ -68,7 +68,7 @@ public class SavingsAccountServiceImpl implements SavingsAccountService {
 
 	}
 
-	public SavingsAccount updateAccount(SavingsAccount account) throws ClassNotFoundException, SQLException {
+	public SavingsAccount updateAccount(SavingsAccount account) throws ClassNotFoundException, SQLException, AccountNotFoundException {
 		return savingsAccountDAO.updateAccount(account);
 	}
 

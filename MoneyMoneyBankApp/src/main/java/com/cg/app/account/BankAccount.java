@@ -27,6 +27,11 @@ public class BankAccount {
 	}
 	
 
+	public BankAccount(String accountHolderName) {
+		super();
+		this.accountHolderName = accountHolderName;
+	}
+
 	public String getAccountHolderName() {
 		return accountHolderName;
 	}

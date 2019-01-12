@@ -18,7 +18,7 @@ public class SavingsAccountSJDaoImpl implements SavingsAccountDAO {
 	@Autowired
 	public JdbcTemplate template;
 
-	public SavingsAccount createNewAccount(SavingsAccount account){
+	public SavingsAccount createNewAccount(SavingsAccount account) {
 		template.update("INSERT INTO account_details VALUES(?,?,?,?,?,?)",
 				new Object[] { account.getBankAccount().getAccountNumber(),
 						account.getBankAccount().getAccountHolderName(), account.getBankAccount().getAccountBalance(),
@@ -27,13 +27,16 @@ public class SavingsAccountSJDaoImpl implements SavingsAccountDAO {
 		return account;
 	}
 
-	public SavingsAccount updateAccount(SavingsAccount account) throws ClassNotFoundException, SQLException {
-
-		template.update("UPDATE account_details SET  account_hn = ?, salary = ? WHERE account_number = ?",
-				new Object[] { account.getBankAccount().getAccountHolderName(), account.isSalary(),
-						account.getBankAccount().getAccountNumber() });
+	public SavingsAccount updateAccount(SavingsAccount account) throws ClassNotFoundException, SQLException, AccountNotFoundException {
+		
+		template.update(
+				"UPDATE account_details SET account_hn = ?, salary = ? WHERE account_number = ?",
+				new Object[] { account.getBankAccount().getAccountHolderName(), 
+						account.isSalary(),account.getBankAccount().getAccountNumber() });
+		System.out.println(account.getBankAccount().getAccountHolderName());
 		return account;
 	}
+		
 
 	public SavingsAccount getAccountById(int accountNumber)
 			throws ClassNotFoundException, SQLException, AccountNotFoundException {
