@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +19,7 @@
 <title>Money Money Bank</title>
 </head>
 <body>
-<header>
+	<header>
 		<nav class="navbar navbar-inverse"
 			style="background-color: orange; border-block-end-color: red">
 			<div class="container-fluid">
@@ -49,8 +49,19 @@
 			</div>
 		</nav>
 	</header>
-	<div class="container">
-            <h2>Update Success</h2>
+	 <div class="container">
+        <h2>Deposit Details</h2>
+            <form action="Deposit">
+                      <div class="form-group">
+                        <label for="acc_no">Account Number:</label>
+                        <input type="number" class="form-control" name="accountNo">
+                      </div>
+                      <div class="form-group">
+                            <label for="amount_deposit">Amount to deposit:</label>
+                            <input type="number" class="form-control" name="amount">
+                          </div>
+                          <button type="submit" class="btn btn-primary" onclick="boolean">Deposit</button>
+            </form>
         </div>
         <div class="footer">
                 <p style="color: red;text-align: center">copyright@2018. ICICI pvt ltd.</p>

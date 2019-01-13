@@ -42,26 +42,35 @@
 							Transfer</a></li>
 					<li><a href="getcurrentbalance" style="color: red">Check
 							Current Balance</a></li>
-					<li><a href="getAllTheAccounts" style="color: red">Get
-							All The Accounts</a></li>
+					<li><a href="getAllTheAccounts" style="color: red">Get All
+							The Accounts</a></li>
 
 				</ul>
 			</div>
 		</nav>
 	</header>
 	<div class="container">
-                    <h2>Update Account.</h2>
-                    <form action="updatedAccount">
-                        <div class="form-group">
-                          <label for="name">Enter Account Number:</label>
-                          <input type="number" class="form-control" name="accountNumber">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
-                <div class="footer">
-                        <p style="color: red;text-align: center">copyright@2018. ICICI pvt ltd.</p>
-                      </div>
+		<h2>Transfer Fund</h2>
+		<form action="transferFund">
+			<div class="form-group">
+				<label for="from_acc_no">Enter Sender's Account Number:</label> <input
+					type="number" class="form-control" name="senderAccountNo">
+			</div>
+			<div class="form-group">
+				<label for="to_acc_no">Enter Receiver's Account Number:</label> <input
+					type="number" class="form-control" name="receiverAccountNo">
+			</div>
+			<div class="form-group">
+				<label for="amt">Amount to transfer:</label> <input type="number"
+					class="form-control" name="amount">
+			</div>
+			<button type="submit" class="btn btn-primary" onclick="boolean">Transfer</button>
+		</form>
+	</div>
+	<div class="footer">
+		<p style="color: red; text-align: center">copyright@2018. ICICI
+			pvt ltd.</p>
+	</div>
 
 </body>
 </html>

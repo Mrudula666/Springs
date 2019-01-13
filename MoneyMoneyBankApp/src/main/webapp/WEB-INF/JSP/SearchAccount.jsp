@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,13 +13,13 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<title>Form Withdraw</title>
+<title>Home</title>
 <link rel="stylesheet"
 	href="C:\HTML_Assingments\Banking_application\footer.css">
 <title>Money Money Bank</title>
 </head>
 <body>
-<header>
+	<header>
 		<nav class="navbar navbar-inverse"
 			style="background-color: orange; border-block-end-color: red">
 			<div class="container-fluid">
@@ -49,6 +49,19 @@
 			</div>
 		</nav>
 	</header>
+	<div class="container">
+                    <h2>Search Account.</h2>
+                    <form action="search">
+                        <div class="form-group">
+                          <label for="name">Enter Account Number:</label>
+                          <input type="number" class="form-control" name="searchAccountNo">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="footer">
+                        <p style="color: red;text-align: center">copyright@2018. ICICI pvt ltd.</p>
+                      </div>
 
 </body>
 </html>
